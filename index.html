@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="gameBox">
+      <p id="intro">
+        Are you a good guesser ? Let us put you to the test. <br />
+        Pick a level :
+      </p>
+
+      <div id="levelChoice">
+        <input
+          type="radio"
+          name="lvl"
+          id="easy"
+          value="easy"
+          onchange="easy();"
+        />
+        <label for="easy">Easy</label>
+
+        <input
+          type="radio"
+          name="lvl"
+          id="medium"
+          value="medium"
+          onchange="medium();"
+        />
+        <label for="medium">Medium</label>
+
+        <input
+          type="radio"
+          name="lvl"
+          id="hard"
+          value="hard"
+          onchange="hard();"
+        />
+        <label for="hard">Hard</label>
+      </div>
+
+      <p id="output"></p>
+
+      <div id="gameMessage">
+        <p id="instruction"></p>
+        <p id="chanceCount"></p>
+      </div>
+
+      <div id="inputBox">
+        <input type="text" id="input" />
+        <button id="btnSubmit" type="submit">Submit</button>
+      </div>
+
+      <div id="resultBox">
+        <p id="resultMessage"></p>
+        <div id="win">
+            <img src="./gameWin.jpg">
+        </div>
+        <div id="loss">
+            <img src="./gameOver.png">
+        </div>
+        <button id="restartButton" onClick="window.location.reload();">Restart Game</button>
+      </div>
+
+    </div>
+
+    <div id="picture">
+      <img src="./wallpaper.jpg" />
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
