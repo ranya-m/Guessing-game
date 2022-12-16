@@ -1,6 +1,4 @@
-//  Variable : ALL radio buttons for level choice:
-// let radioButton = document.querySelector("input[name='lvl']");
-
+ç
 //**********************************************************************************************************************
 // LOOPS : setting the random guess number for each level
 // const radioButtons = document.querySelectorAll("input[name='lvl']");
@@ -8,8 +6,7 @@ let guess;
 let max;
 
 function generateGuess (maxGuess) {
-    // radioButtons[i].addEventListener("click", () => {
-    // if (radioButtons[i].checked) {
+
         guess = Math.floor(Math.random() * maxGuess + 1);
         console.log(guess); 
         return guess, maxGuess;     
@@ -77,16 +74,22 @@ const btnSubmit = document.getElementById("btnSubmit");
 
 function easy() {
     generateGuess(10);
+    instruction.innerText = 'Choose a number between 0 and ' + maxGuess + '';
+
     WinOrLoose(2, 10);
 };
 
 function medium() {
    generateGuess(100);
+   instruction.innerText = 'Choose a number between 0 and ' + maxGuess + '';
+
    WinOrLoose(5, 100);   
 };
 
 function hard() {
    generateGuess(1000);
+   instruction.innerText = 'Choose a number between 0 and ' + maxGuess + '';
+
    WinOrLoose(10, 1000);   
 };
 
